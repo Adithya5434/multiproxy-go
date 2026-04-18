@@ -20,11 +20,21 @@ go build -o multiproxy .
 
 ### 📦 Run from releases
 
-1. [Download latest release](https://github.com/adithya5434/multiproxy-go/releases/latest) for your OS (Windows/Linux) from the **Releases** section
+1. [Download latest release](https://github.com/adithya5434/multiproxy-go/releases/latest) for your OS (Windows/Linux)
+
 2. Run:
 
+**Linux**
+
 ```bash
-./multiproxy
+chmod +x multiproxy-linux-amd64
+./multiproxy-linux-amd64
+```
+
+**Windows**
+
+```powershell
+.\multiproxy-windows-amd64.exe
 ```
 
 ---
