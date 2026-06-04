@@ -10,3 +10,8 @@ type MCProxy struct {
 	MCHost string
 	MCPort int
 }
+
+type WebProxy struct {
+    Host string
+    Port int
+}

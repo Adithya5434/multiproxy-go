@@ -13,9 +13,13 @@ type Config struct {
 
 	MCServerIP   string `json:"mc_server_ip"`
 	MCServerPort int    `json:"mc_server_port"`
+    
+	WebProxyHost string `json:"web_proxy_host"`
+    WebProxyPort int    `json:"web_proxy_port"`
 
 	ListenIP   string `json:"listen_ip"`
 	ListenPort int    `json:"listen_port"`
+
 }
 
 func DefaultConfig() *Config {
@@ -25,6 +29,8 @@ func DefaultConfig() *Config {
 		Socks4Username: "",
 		MCServerIP:     "localhost",
 		MCServerPort:   25565,
+		WebProxyHost:   "localhost",
+		WebProxyPort:   8080,
 		ListenIP:       "localhost",
 		ListenPort:     1080,
 	}

@@ -1,0 +1,6 @@
+# Builds
+*.exe
+multiproxy-linux-amd64
+
+# Local config
+proxy_config.json

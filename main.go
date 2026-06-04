@@ -45,6 +45,7 @@ func main() {
 	socks5 := protocols.NewSocks5Proxy(cfg.Socks5Username, cfg.Socks5Password)
 	socks4 := protocols.NewSocks4Proxy(cfg.Socks4Username)
 	http   := protocols.NewHTTPProxy("", "", "")
+	httpWeb := protocols.NewHTTPWebProxy(cfg.WebProxyHost, cfg.WebProxyPort)
 	mc     := protocols.NewMCProxy(cfg.MCServerIP, cfg.MCServerPort)
 
 	for {
@@ -53,7 +54,7 @@ func main() {
 			fmt.Println(err)
 		}
 
-		go router.Route(conn, socks5, socks4, http, mc)
+		go router.Route(conn, socks5, socks4, http, httpWeb, mc)
 
 	}
 

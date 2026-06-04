@@ -16,7 +16,7 @@ import (
 // var minecraftProxy = protocols.NewMCProxy("localhost", 25565)
 
 func Route(
-    conn net.Conn, socks5 *protocols.Proxy, socks4 *protocols.Proxy, http *protocols.Proxy, mc *protocols.MCProxy ) {
+    conn net.Conn, socks5 *protocols.Proxy, socks4 *protocols.Proxy, http *protocols.Proxy, httpWeb *protocols.WebProxy, mc *protocols.MCProxy ) {
 	defer conn.Close()
 
 	buf := make([]byte, 1024)
@@ -43,6 +43,9 @@ func Route(
 
 	case "http_proxy":
 		http.HandleHTTPConnection(reader, conn)
+
+	case "http_web":
+		httpWeb.HandleHTTPWebConnection(reader, conn)
 
 	case "minecraft":
 		mc.HandleMinecraftClient(reader, conn)
