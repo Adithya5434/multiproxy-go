@@ -55,6 +55,7 @@ Edit this file and restart the proxy.
 ## 🌐 Supported Protocols
 
 * HTTP Proxy (with CONNECT support)
+* HTTP Web Proxy
 * SOCKS4 / SOCKS4a
 * SOCKS5 (optional authentication)
 * Minecraft TCP proxy
