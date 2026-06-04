@@ -89,5 +89,5 @@ You can also test using:
 ## 🛠️ TODO
 
 * [ ] Authentication in  HTTP proxy 
-* [ ] Add web proxy support
+* [X] Add web proxy support
 
